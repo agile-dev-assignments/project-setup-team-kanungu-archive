@@ -38,7 +38,7 @@ export default props => {
       <a className="menu-item" href="/About">
         About
       </a>
-      <a className="menu-item" href="/SignedOutLogin">
+      <a className="menu-item" href="/Login">
         Sign In
       </a>
       <a className="menu-item" href="/SignOut">

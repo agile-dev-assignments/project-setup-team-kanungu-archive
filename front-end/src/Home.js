@@ -45,8 +45,17 @@ const Home=(props)=> {
                 </Link>
 
             <SearchBar />
-            <h2>Please pardon our appearance... hopefully we'll have a cute app soon</h2>
+            <h2>Explore our recipes below :D</h2>
 
+            <FeedPost> 
+                <RecipePage/>
+            </FeedPost>
+            <FeedPost> 
+                <RecipePage/>
+            </FeedPost>
+            <FeedPost> 
+                <RecipePage/>
+            </FeedPost>
             <FeedPost> 
                 <RecipePage/>
             </FeedPost>

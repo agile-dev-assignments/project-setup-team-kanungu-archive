@@ -9,6 +9,7 @@ const SignOut=()=> {
     return (
         <div className="container">
             <h1>SignOut</h1>
+            <p1>You have sucessfully been signed out.</p1>
         </div>
     )
 }

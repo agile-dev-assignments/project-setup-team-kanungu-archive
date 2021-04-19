@@ -17,9 +17,6 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User',userSchema)
 
 
-// generate password hash
-User.methods.generateHash = function (password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
-}
+
 
 module.exports = User;

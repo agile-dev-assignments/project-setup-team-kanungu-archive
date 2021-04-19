@@ -1,7 +1,6 @@
 // import and instantiate express
-const express = require("express") // CommonJS import style!
-const app = express() // instantiate an Express object
-const cors = require("cors")
+const express = require("express"); // CommonJS import style!
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require('mongoose');
@@ -11,21 +10,28 @@ const multer = require('multer');
 const path = require('path');
 require('dotenv').config({path:'../.env'})
 
+
+const app = express(); // instantiate an Express object
+
 //const helpers = require('./helpers');
 // we will put some server logic here later...
 // export the express app we created to make it available to other modules
 
 
-app.use(cors())
+// Middleware
+app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/recipes", recipesRouter);
 app.use('/user', userRouter);
+app.use(bodyParser.json());
 
 app.use(express.json()) // decode JSON-formatted incoming POST data
 app.use(express.urlencoded({ extended: true })) // decode url-encoded incoming POST data
+
+
 
 //Mongoose stuff 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@recipecentral.zmgix.mongodb.net/RecipeCentral?retryWrites=true&w=majority`

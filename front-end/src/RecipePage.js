@@ -23,7 +23,7 @@ const RecipePage = (props)=> {
 
         axios(`http://localhost:5000/user/${recipe.author}`)
         .then((response) => {
-           
+           //recipe.author.firstname , replace all fields w that
             const user = {firstName:response.data.firstName,lastName:response.data.lastName,profileImage:response.data.profileImage,username:response.data.username}
             setA(user)
          

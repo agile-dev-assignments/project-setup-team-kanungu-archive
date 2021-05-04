@@ -25,7 +25,7 @@ const Home=(props)=> {
     const [RecipeList,setList] = useState(null)
     useEffect(()=>{
         //get all recipes 
-        axios({url:`http://localhost:5000/post`,method:'GET'})
+        axios({url:`http://localhost:5000/post`, method:'GET'})
             .then(res =>{
                 const recipes = res.data;
                 setList(recipes)

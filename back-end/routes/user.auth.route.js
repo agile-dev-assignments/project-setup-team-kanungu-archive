@@ -1,6 +1,7 @@
 const { authJwt } = require("../auth_helpers");
 const controller = require("../auth_controllers/user.controller");
 
+//https://bezkoder.com/node-js-mongodb-auth-jwt/
 module.exports = function(app) {
   app.use(function(req, res, next) {
     res.header(

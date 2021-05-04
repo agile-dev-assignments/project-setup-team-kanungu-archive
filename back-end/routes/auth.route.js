@@ -10,11 +10,12 @@ module.exports = function(app) {
     next();
   });
 
-  // app.post(
-  //   "/auth/test",  function (req, res) {
-  //     res.send('welcome, ' + req.body.username)
-  //   }     
-  // );
+  app.post(
+    "/auth/test",  function (req, res) {
+      res.send('welcome, ' + req.body)
+      // console.log(req.body)
+    }     
+  );
 
   app.post(
     "/auth/signup",

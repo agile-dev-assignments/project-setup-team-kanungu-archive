@@ -46,13 +46,7 @@ const Home=(props)=> {
     },[RecipeList])
     
     let button;
-    if (!props.isSigned) {
-      button =  <Link to="./Login">
-                    <button type="button" className="float">
-                        Login
-                    </button>
-                </Link>;
-    }
+   
 
     if(isLoading ===false){
         return  (
@@ -61,9 +55,8 @@ const Home=(props)=> {
                 <h1 className='home_header'>Recipe Central</h1>
 
                 
-                <Link to="./Login">
+               
 
-                <img src= "512.svg" alt="Recipe Central Logo" />
 
                 {/* <Link to="./Login">
                     <button type="button" className="float">
@@ -82,9 +75,9 @@ const Home=(props)=> {
                 
 
                 ))}
-            {/* </div> */}
+            </div> 
         </div>
-        </div>
+     
     )
             }
             else{

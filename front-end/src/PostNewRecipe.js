@@ -118,9 +118,9 @@ const PostNewRecipe=(props)=> {
                    setDifficulty(event.target.value)
                  }}>
                  <optgroup>
-                 <option value="Beginner">Easy</option>
-                 <option value="Intermediate">Intermediate</option>
-                 <option value="Difficult">Advanced</option>
+                 <option value="beginner">Easy</option>
+                 <option value="intermediate">Intermediate</option>
+                 <option value="difficult">Advanced</option>
                  </optgroup>
                  </select>
                  
